@@ -1,0 +1,25 @@
+@media (max-width: 576px){
+    .margin-x{
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    .margin-y{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .imagen-x{
+        max-height: 80vw;
+    }
+    .--no-padding {
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+}
+
+ion-thumbnail{
+    --size: 10vh;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    background-image: none;
+}

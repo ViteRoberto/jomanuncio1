@@ -1,0 +1,15 @@
+img{
+    filter: brightness(0) invert(1);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 576px){
+    .margin-x{
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}

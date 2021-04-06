@@ -1,0 +1,35 @@
+<ion-grid style="width: 100vw;  margin-inline-start: -16px; margin-block-end: -16px;" [ngStyle]="{'background':guia.consultor?.colorPrincipal}">
+  <ion-row [ngStyle]="{'background':guia.consultor?.colorPrincipal}">
+    <ion-col sizeXs="12" sizeMd="4" *ngIf="!vacio">
+      <ion-item lines="none" style="--background: {{ guia.consultor?.colorPrincipal }}; --color: {{ guia.consultor?.textoPrincipal }}">
+        <ion-label class="ion-text-center"><b>Encuéntranos en</b></ion-label>
+      </ion-item>
+      <ion-item lines="none" style="--background: {{ guia.consultor?.colorPrincipal }}; --color: {{ guia.consultor?.textoPrincipal }}">
+        <ion-label class="ion-text-center ion-text-wrap">
+          <h1><b>{{ guia.consultor?.celular }}</b>&nbsp;&nbsp;<a href="https://api.whatsapp.com/send?phone=521{{ guia.consultor?.celular }}" target="_blank"><ion-icon name="logo-whatsapp" [ngStyle]="{'color':guia.consultor?.textoPrincipal}"></ion-icon></a>&nbsp;&nbsp;<a href="tel:{{ guia.consultor?.celular }}"><ion-icon name="call" [ngStyle]="{'color':guia.consultor?.textoPrincipal}"></ion-icon></a></h1>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none" style="--background: {{ guia.consultor?.colorPrincipal }}; --color: {{ guia.consultor?.textoPrincipal }}">
+        <ion-label *ngIf="guia.consultor?.ubicacion?.direccion" class="ion-text-center ion-text-wrap">
+          {{ guia.consultor?.ubicacion?.direccion }}
+        </ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col sizeMd="2" offsetMd="1" class="ion-hide-md-down" *ngIf="!vacio">
+      <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 100%;">
+        <a href="http://vive.jom.mx">
+          <img src="https://static.tokkobroker.com/tfw_images/4079_Jom!%20Comunidad%20Inmobiliaria/logo-completo.png">
+        </a>
+      </ion-row>
+    </ion-col>
+    <ion-col sizeXs="12" sizeMd="4" offsetMd="1" *ngIf="!vacio">
+      <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 100%;">
+        <ion-item lines="none" style="--background: {{ guia.consultor?.colorPrincipal }}; --color: {{ guia.consultor?.textoPrincipal }};">
+          <ion-label class="ion-text-center ion-text-wrap" style="--color: {{ guia.consultor?.textoPrincipal }};">
+            <h1><a href="https://www.{{ guia.consultor?.facebook }}" target="_blank" style="--color: {{ guia.consultor?.textoPrincipal }};"><ion-icon name="logo-facebook" [ngStyle]="{'color':guia.consultor?.textoPrincipal}"></ion-icon>&nbsp;Síguenos</a></h1>
+          </ion-label>
+        </ion-item>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-grid>
